@@ -44,7 +44,7 @@ public class ConfigProperties {
             config.setAlyaFile(properties.getProperty("ALYA_FILE"));
             
             config.setAlyaRepositoryLocal(properties.getProperty("ALYA_REPOSITORY_LOCAL"));
-            config.setAlyaRepositoryLocal(properties.getProperty("ADAN_REPOSITORY_LOCAL"));
+            config.setAdanRepositoryLocal(properties.getProperty("ADAN_REPOSITORY_LOCAL"));
             config.setAlyaInputDiretory(properties.getProperty("ALYA_INPUT_DIRECORY"));
             config.setAdanInputDiretory(properties.getProperty("ADAN_INPUT_DIRETORY"));
             
