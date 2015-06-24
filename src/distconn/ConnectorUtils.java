@@ -36,9 +36,9 @@ public class ConnectorUtils {
         });
         
         List<File> fs = new ArrayList();
-        //no mac preciso elimiar os arquivops ds.store por isso pego 1 e 2
+        //no mac é preciso elimiar os arquivos ds.store para isso pego 1 e 2
+        fs.add(files[0]);
         fs.add(files[1]);
-        fs.add(files[2]);
         
         return fs;
 

@@ -19,26 +19,17 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {  
-            
-            //criando repositorios
-            boolean mkdir = new File("alya-repository").mkdir();
-            boolean mkdir1 = new File("adan-repository").mkdir();
+    public static void main(String[] args) {
 
-            try {
+        //criando repositorios
+        boolean mkdir = new File("alya-repository").mkdir();
+        boolean mkdir1 = new File("adan-repository").mkdir();
 
-                Config config = new ConfigProperties().getPropValues();
-                
-                new ADANConnector(config).start();
-                
-                new AlyaConnector(config).start();
-
-                
-
-            } catch (IOException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        Config config = new ConfigProperties().getPropValues();        
+        
+        new Connector(config).start();
+        new ConnectorAlya(config).start();
 
     }
 
+}

@@ -5,6 +5,7 @@
  */
 package distconn;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Level;
@@ -22,7 +23,8 @@ public class ConfigProperties {
             java.util.Properties properties = new java.util.Properties();
             
 
-            InputStream is = getClass().getResourceAsStream("config.properties");
+            InputStream is = new FileInputStream("config.properties");
+                    //getClass().getResourceAsStream("../config.properties");
 
             properties.load(is);
 
@@ -35,7 +37,9 @@ public class ConfigProperties {
 
             Config config = new Config();
             config.setAlyaHost(properties.getProperty("ALYA_HOST"));
+            
             config.setAdanHost(properties.getProperty("ADAN_HOST"));
+           
             config.setAdanUserHost(properties.getProperty("ADAN_USER_HOST"));
             config.setAlyaUserHost(properties.getProperty("ALYA_USER_HOST"));
             config.setPrivatekey(properties.getProperty("PRIVATE_KEY"));
@@ -45,8 +49,8 @@ public class ConfigProperties {
             
             config.setAlyaRepositoryLocal(properties.getProperty("ALYA_REPOSITORY_LOCAL"));
             config.setAdanRepositoryLocal(properties.getProperty("ADAN_REPOSITORY_LOCAL"));
-            config.setAlyaInputDiretory(properties.getProperty("ALYA_INPUT_DIRECORY"));
-            config.setAdanInputDiretory(properties.getProperty("ADAN_INPUT_DIRETORY"));
+            config.setAlyaInputDiretory(properties.getProperty("ALYA_INPUT_DIRECTORY"));
+            config.setAdanInputDiretory(properties.getProperty("ADAN_INPUT_DIRECTORY"));
             
             config.setAdanThreadSleep(Long.parseLong(properties.getProperty("ADAN_THREAD_SLEEP")) );
             config.setAlyaThreadSleep(Long.parseLong(properties.getProperty("ALYA_THREAD_SLEEP")) );

@@ -70,7 +70,5 @@
     nbproject/build-impl.xml file. 
 
     -->
-    <target name="-post-compile">
-    <copy file="config.properties" todir="${dist.dir}"/>        
-    </target>
+    
 </project>
